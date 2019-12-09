@@ -9,7 +9,7 @@ Initial datasets(mr,R52,R8) are from [TextGCN](https://github.com/yao8839836/tex
 * `/data/mr_ori.txt` raw data not processed, Each line is for a document.
 * `/data/mr_clear.txt` is the preprocessed data with function `def clean_str()` in `datapro.py`. Each line is for a document.
 # Baselines
-cited from [Text classification](https://github.com/zhengwsh/text-classification)
+cited from [Text classification](https://github.com/zhengwsh/text-classification).  
 We have made appropriate modifications to fit our data
 # Code
 To train model 
