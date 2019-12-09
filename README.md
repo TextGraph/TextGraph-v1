@@ -10,7 +10,7 @@ Code of the paper:
 # Code
 To train model 
 
-    python train.py
+    python train.py --dataset mr
 
     
 
