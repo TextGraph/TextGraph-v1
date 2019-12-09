@@ -1,5 +1,5 @@
 # TextGraph
-Code of the paper:  
+Code of the paper:  Modeling Short Texts as Graphs for Classification
 # Environment
 * python>=3.5
 * tensorflow>=1.12.1
