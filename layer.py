@@ -157,8 +157,8 @@ class CnnLayerLast:
 
     def self_att(self, inputs, att_dims, adj):
         seq = tf.keras.layers.Conv1D(att_dims, 1, activation=self.act, name="q", use_bias=False)(inputs)
-        Q = tf.keras.layers.Conv1D(att_dims, 1, activation=tf.nn.tanh, name="k")(seq)
-        K = tf.keras.layers.Conv1D(att_dims, 1, activation=tf.nn.tanh, name="v")(seq)
-        att = tf.multiply(tf.nn.sigmoid(tf.matmul(Q, tf.transpose(K, [0, 2, 1]))), adj)
+        Q = tf.keras.layers.Conv1D(32, 1, activation=lambda x:x, name="k")(seq)
+        K = tf.keras.layers.Conv1D(32, 1, activation=lambda x:x, name="v")(seq)
+        att = tf.multiply(tf.nn.sigmoid(tf.matmul(Q, tf.transpose(K, [0, 2, 1]))/np.sqrt(32.)), adj)
         output = tf.matmul(att, seq)
         return output
